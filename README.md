@@ -211,24 +211,6 @@ pruebaTecnica-FechasHabiles/
 
 El proyecto incluye pruebas manuales básicas en la carpeta `src/test/`. Estas pruebas no son automatizadas y sirven para verificar funcionalidades individuales.
 
-### Ejecutar Pruebas Manuales
-
-```bash
-# Compilar primero
-npx tsc
-
-# Ejecutar test de festivos
-node dist/test/holidayTest.js
-
-# Ejecutar test de días hábiles
-node dist/test/workingDaysTest.js
-
-# Ejecutar test de horas hábiles
-node dist/test/workingHoursTest.js
-
-# Ejecutar test de encontrar día hábil
-node dist/test/testFindWorkingDay.js
-```
 
 ## Contribución
 
