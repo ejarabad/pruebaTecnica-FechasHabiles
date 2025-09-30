@@ -1,5 +1,5 @@
 export interface Calculation {
-    day: number;
+    days: number;
     hours: number;
     startDate: Date
 }

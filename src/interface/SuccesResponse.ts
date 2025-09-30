@@ -1,4 +1,4 @@
-export interface Success {
+export interface SuccessResponse {
     date: string;
 }
 
