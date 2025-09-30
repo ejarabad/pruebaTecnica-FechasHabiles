@@ -15,21 +15,14 @@ const dateCalculator = async (params: Calculation): Promise<Date> => {
 
   let currentDate = params.startDate;
 
-  console.log("INICIO DEL CALCULO");
-  console.log("1. HORA LOCAL INICIAL", currentDate.toISOString());
-
   currentDate = findNextWorkingDay(currentDate, holidays);
-
-  console.log("2. PRIMER DIA HABIL", currentDate.toISOString());
 
   if (params.days> 0) {
     currentDate = addWorkingDay(currentDate, params.days, holidays);
-    console.log("3. SUMA DIAS HABIL", currentDate.toISOString());
   }
 
   if (params.hours > 0) {
     currentDate = addWorkingHours(currentDate, params.hours, holidays);
-    console.log("4. SUMA HORAS HABIL", currentDate.toISOString());
   }
 
   return currentDate
