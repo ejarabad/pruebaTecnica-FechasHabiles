@@ -192,27 +192,6 @@ pruebaTecnica-FechasHabiles/
 └── README.md                    # Este archivo
 ```
 
-### Diagrama de Arquitectura
-
-```mermaid
-graph TD
-    A[Cliente HTTP] --> B[Express Server]
-    B --> C[dateController]
-    C --> D[dateCalculator]
-    D --> E[findNextWorkingDay]
-    D --> F[addWorkingDay]
-    D --> G[addWorkingHours]
-    E --> H[holidayFetcher]
-    F --> H
-    G --> H
-    H --> I[API Externa Festivos]
-
-    style A fill:#e1f5fe
-    style B fill:#fff3e0
-    style D fill:#e8f5e8
-    style H fill:#fce4ec
-```
-
 ## Dependencias y Librerías
 
 ### Dependencias de Producción
