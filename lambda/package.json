@@ -5,7 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "clean": "rm -rf ./dist",
+    "tsc": "tsc --project tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && tsc",
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'tsc && node dist/index.js'"
   },
   "repository": {
@@ -23,7 +26,8 @@
     "axios": "^1.12.2",
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "serverless-http": "^4.0.0"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",

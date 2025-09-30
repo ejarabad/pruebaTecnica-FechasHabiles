@@ -4,10 +4,10 @@ import { ErrorResponse } from "../interface/Error.js";
 import { SuccessResponse } from "../interface/SuccesResponse.js";
 import dateCalculator from "../services/dateCalculator.js";
 
-const handleDateCalculator = async (
+export default function handleDateCalculator (
   req: Request,
   res: Response
-): Promise<void> => {
+) {
   try {
     const { days: daysStr, hours: hoursStr, date: dateStr } = req.query;
 
@@ -54,5 +54,3 @@ const handleDateCalculator = async (
     res.status(500).json(errorResponse);
   }
 };
-
-export default handleDateCalculator;
